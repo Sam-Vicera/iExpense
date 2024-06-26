@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ExpenseItem: Identifiable, Codable {
+struct ExpenseItem: Identifiable, Codable, Equatable {
     var id = UUID()
     let name: String
     let type: String
@@ -46,14 +46,18 @@ struct ContentView: View {
                     ForEach(expenses.items.filter { $0.type == "Personal" }) { item in
                         ExpenseRow(item: item)
                     }
-                    .onDelete(perform: removeItems)
+                    .onDelete { offsets in
+                        removeItems(at: offsets, type: "Personal")
+                    }
                 }
 
                 Section(header: Text("Business Expenses")) {
                     ForEach(expenses.items.filter { $0.type == "Business" }) { item in
                         ExpenseRow(item: item)
                     }
-                    .onDelete(perform: removeItems)
+                    .onDelete{ offsets in
+                        removeItems(at: offsets, type: "Business")
+                    }
                 }
             }
             .navigationTitle($issueName)
@@ -72,11 +76,20 @@ struct ContentView: View {
 
          
         }
-
     }
 
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItems(at offsets: IndexSet, type: String) {
+            /* due to seperating the array into a filter above and having a single remove it function, this updated logic allows for all the values in the index set that match the current type to be collected in itemsToRemove
+             
+             Afterwards, we iterate over the indexset collected and check where the first occurence occurs of the value we would like to remove and then removing it in the original array
+             */
+        
+        let itemstoRemove = offsets.map { expenses.items.filter { $0.type == type}[$0] }
+        for item in itemstoRemove {
+            if let index = expenses.items.firstIndex(of: item) {
+                expenses.items.remove(at: index)
+            }
+        }
     }
 }
 
