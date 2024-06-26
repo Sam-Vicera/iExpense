@@ -12,6 +12,8 @@
 		2009A18D2BB1D50A00933D6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2009A18C2BB1D50A00933D6D /* Assets.xcassets */; };
 		2009A1902BB1D50A00933D6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2009A18F2BB1D50A00933D6D /* Preview Assets.xcassets */; };
 		2009A1972BB1E79900933D6D /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009A1962BB1E79900933D6D /* AddView.swift */; };
+		200B3C322C2C841400D02D3E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C312C2C841400D02D3E /* LoginView.swift */; };
+		200B3C342C2C8C3A00D02D3E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C332C2C8C3A00D02D3E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		2009A18C2BB1D50A00933D6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2009A18F2BB1D50A00933D6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2009A1962BB1E79900933D6D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		200B3C312C2C841400D02D3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		200B3C332C2C8C3A00D02D3E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 				2009A1962BB1E79900933D6D /* AddView.swift */,
 				2009A18C2BB1D50A00933D6D /* Assets.xcassets */,
 				2009A18E2BB1D50A00933D6D /* Preview Content */,
+				200B3C312C2C841400D02D3E /* LoginView.swift */,
+				200B3C332C2C8C3A00D02D3E /* Extensions.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200B3C342C2C8C3A00D02D3E /* Extensions.swift in Sources */,
 				2009A18B2BB1D50600933D6D /* ContentView.swift in Sources */,
 				2009A1892BB1D50600933D6D /* iExpenseApp.swift in Sources */,
+				200B3C322C2C841400D02D3E /* LoginView.swift in Sources */,
 				2009A1972BB1E79900933D6D /* AddView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
