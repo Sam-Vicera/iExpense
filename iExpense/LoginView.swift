@@ -19,7 +19,7 @@ struct LoginView: View {
                 .resizable()
                 .frame(width: 150, height: 150)
             Text("IExpense")
-                .comicNeueBoldFont(fontSize: 28)
+                .customFont(.title, fontSize: 28)
                 .foregroundStyle(.fontColor)
 
         }
@@ -29,11 +29,11 @@ struct LoginView: View {
             
             VStack(alignment: .leading, spacing: 15){
                 Text("Hi there! Nice to see you again")
-                    .comicNeueItalicFont(fontSize: 22)
+                    .customFont(.subheading, fontSize: 22)
                     .foregroundStyle(.fontColor)
                 
                 Text("Email")
-                    .comicNeueLightItalicFont(fontSize: 21)
+                    .customFont(.subheading, fontSize: 21)
                     .foregroundStyle(.fontColor)
                 
                 HStack {
@@ -44,7 +44,7 @@ struct LoginView: View {
                 
                 
                 Text("Password")
-                    .comicNeueLightItalicFont(fontSize: 21)
+                    .customFont(.subheading, fontSize: 21)
                     .foregroundStyle(.fontColor)
                 
                 HStack {
@@ -67,7 +67,7 @@ struct LoginView: View {
                 .padding(.vertical, 15)
             
             Text("You can also sign in with these options below")
-                .comicNeueItalicFont(fontSize: 19)
+                .customFont(.paragraph, fontSize: 19)
                 .foregroundStyle(.fontColor)
         }
         
@@ -82,11 +82,11 @@ struct LoginView: View {
         
         HStack(spacing: 105) {
             Text("Forgot Password?")
-                .comicNeueLightItalicFont(fontSize: 21)
+                .customFont(.paragraph, fontSize: 21)
                 .foregroundStyle(.fontColor)
             
             Text("Sign Up")
-                .comicNeueLightItalicFont(fontSize: 21)
+                .customFont(.paragraph, fontSize: 21)
                 .foregroundStyle(.fontColor)
         }
         .padding(.horizontal, 25)
