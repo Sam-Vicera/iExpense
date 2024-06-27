@@ -12,29 +12,36 @@ struct LoginView: View {
     @State private var userPassword: String = ""
     
     var body: some View {
+        VStack{
+            
         VStack(alignment: .center, spacing: 2) {
             Image("IExpenseLogo")
                 .resizable()
                 .frame(width: 150, height: 150)
             Text("IExpense")
                 .font(.title)
-          
+                .foregroundStyle(.fontColor)
+            
         }
         .padding(30)
         
         HStack {
             VStack(alignment: .leading, spacing: 25){
                 Text("Hi there! Nice to see you again")
+                    .foregroundStyle(.fontColor)
                 
                 Text("Email")
+                    .foregroundStyle(.fontColor)
                 
                 HStack {
                     Image(systemName: "envelope")
                     TextField("", text: $userEmail)
                 }
-                .underlineTextField()  
+                .underlineTextField()
+                
                 
                 Text("Password")
+                    .foregroundStyle(.fontColor)
                 
                 HStack {
                     Image(systemName: "exclamationmark.shield")
@@ -43,9 +50,9 @@ struct LoginView: View {
                 }
                 .underlineTextField()
                 
-               
                 
-             
+                
+                
             }
             Spacer()
         }
@@ -56,8 +63,9 @@ struct LoginView: View {
                 .padding(.vertical, 15)
             
             Text("You can also sign in with these options below")
+                .foregroundStyle(.fontColor)
         }
-    
+        
         HStack(spacing: 45) {
             Button(){}label: {
                 Text(" Sign in with AppleID")
@@ -80,13 +88,18 @@ struct LoginView: View {
         
         HStack(spacing: 105) {
             Text("Forgot Password?")
+                .foregroundStyle(.fontColor)
             
             Text("Sign Up")
+                .foregroundStyle(.fontColor)
         }
         .padding(.horizontal, 25)
         .padding(.vertical, 35)
         Spacer()
     }
+        .background(.appBackground)
+    }
+        
 }
 
 #Preview {
