@@ -32,3 +32,19 @@ extension ShapeStyle where Self == Color {
     
     static var fontColor : Color { Color(red: 245/255, green: 245/255, blue: 220/255) }
 }
+
+
+extension View {
+    func comicNeueBoldFont(fontSize: CGFloat) -> some View {
+        self
+            .font(.custom("ComicNeue-Bold", size: fontSize))
+    }
+    func comicNeueItalicFont(fontSize: CGFloat) -> some View {
+        self
+            .font(.custom("ComicNeue-Italic", size: fontSize))
+    } 
+    func comicNeueLightItalicFont(fontSize: CGFloat) -> some View {
+        self
+            .font(.custom("ComicNeue-LightItalic", size: fontSize))
+    }
+}

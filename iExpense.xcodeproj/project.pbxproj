@@ -15,6 +15,13 @@
 		200B3C322C2C841400D02D3E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C312C2C841400D02D3E /* LoginView.swift */; };
 		200B3C342C2C8C3A00D02D3E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C332C2C8C3A00D02D3E /* Extensions.swift */; };
 		200B3C362C2DCF8100D02D3E /* CustomStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B3C352C2DCF8100D02D3E /* CustomStructures.swift */; };
+		200B3C3F2C2DD80000D02D3E /* ComicNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C372C2DD80000D02D3E /* ComicNeue-Bold.ttf */; };
+		200B3C402C2DD80000D02D3E /* ComicNeue-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C382C2DD80000D02D3E /* ComicNeue-BoldItalic.ttf */; };
+		200B3C412C2DD80000D02D3E /* ComicNeue-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C392C2DD80000D02D3E /* ComicNeue-Italic.ttf */; };
+		200B3C422C2DD80000D02D3E /* ComicNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C3A2C2DD80000D02D3E /* ComicNeue-Light.ttf */; };
+		200B3C432C2DD80000D02D3E /* ComicNeue-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C3B2C2DD80000D02D3E /* ComicNeue-LightItalic.ttf */; };
+		200B3C442C2DD80000D02D3E /* ComicNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C3C2C2DD80000D02D3E /* ComicNeue-Regular.ttf */; };
+		200B3C452C2DD80000D02D3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C3D2C2DD80000D02D3E /* OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,14 @@
 		200B3C312C2C841400D02D3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		200B3C332C2C8C3A00D02D3E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		200B3C352C2DCF8100D02D3E /* CustomStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStructures.swift; sourceTree = "<group>"; };
+		200B3C372C2DD80000D02D3E /* ComicNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Bold.ttf"; sourceTree = "<group>"; };
+		200B3C382C2DD80000D02D3E /* ComicNeue-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-BoldItalic.ttf"; sourceTree = "<group>"; };
+		200B3C392C2DD80000D02D3E /* ComicNeue-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Italic.ttf"; sourceTree = "<group>"; };
+		200B3C3A2C2DD80000D02D3E /* ComicNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Light.ttf"; sourceTree = "<group>"; };
+		200B3C3B2C2DD80000D02D3E /* ComicNeue-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-LightItalic.ttf"; sourceTree = "<group>"; };
+		200B3C3C2C2DD80000D02D3E /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
+		200B3C3D2C2DD80000D02D3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		200B3C462C2DDA0400D02D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +74,8 @@
 		2009A1872BB1D50600933D6D /* iExpense */ = {
 			isa = PBXGroup;
 			children = (
+				200B3C462C2DDA0400D02D3E /* Info.plist */,
+				200B3C3E2C2DD80000D02D3E /* Comic_Neue */,
 				2009A1882BB1D50600933D6D /* iExpenseApp.swift */,
 				2009A18A2BB1D50600933D6D /* ContentView.swift */,
 				2009A1962BB1E79900933D6D /* AddView.swift */,
@@ -77,6 +94,20 @@
 				2009A18F2BB1D50A00933D6D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		200B3C3E2C2DD80000D02D3E /* Comic_Neue */ = {
+			isa = PBXGroup;
+			children = (
+				200B3C372C2DD80000D02D3E /* ComicNeue-Bold.ttf */,
+				200B3C382C2DD80000D02D3E /* ComicNeue-BoldItalic.ttf */,
+				200B3C392C2DD80000D02D3E /* ComicNeue-Italic.ttf */,
+				200B3C3A2C2DD80000D02D3E /* ComicNeue-Light.ttf */,
+				200B3C3B2C2DD80000D02D3E /* ComicNeue-LightItalic.ttf */,
+				200B3C3C2C2DD80000D02D3E /* ComicNeue-Regular.ttf */,
+				200B3C3D2C2DD80000D02D3E /* OFL.txt */,
+			);
+			path = Comic_Neue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +168,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				200B3C442C2DD80000D02D3E /* ComicNeue-Regular.ttf in Resources */,
+				200B3C402C2DD80000D02D3E /* ComicNeue-BoldItalic.ttf in Resources */,
+				200B3C3F2C2DD80000D02D3E /* ComicNeue-Bold.ttf in Resources */,
+				200B3C452C2DD80000D02D3E /* OFL.txt in Resources */,
 				2009A1902BB1D50A00933D6D /* Preview Assets.xcassets in Resources */,
+				200B3C412C2DD80000D02D3E /* ComicNeue-Italic.ttf in Resources */,
+				200B3C432C2DD80000D02D3E /* ComicNeue-LightItalic.ttf in Resources */,
+				200B3C422C2DD80000D02D3E /* ComicNeue-Light.ttf in Resources */,
 				2009A18D2BB1D50A00933D6D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +329,7 @@
 				DEVELOPMENT_TEAM = W4HLARA7S9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iExpense/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -320,6 +359,7 @@
 				DEVELOPMENT_TEAM = W4HLARA7S9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iExpense/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
