@@ -12,29 +12,38 @@ struct LoginView: View {
     @State private var userPassword: String = ""
     
     var body: some View {
+        VStack{
+            
         VStack(alignment: .center, spacing: 2) {
-            Image("IExpenseLogo")
-                .resizable()
-                .frame(width: 150, height: 150)
+            LogoView()
             Text("IExpense")
-                .font(.title)
-          
+                .customFont(.title, fontSize: 28)
+                .foregroundStyle(.fontColor)
+
         }
         .padding(30)
         
         HStack {
-            VStack(alignment: .leading, spacing: 25){
-                Text("Hi there! Nice to see you again")
+            
+            VStack(alignment: .leading, spacing: 15){
+                Text("Hello, sign in below or sign up with us!")
+                    .customFont(.subheading, fontSize: 20)
+                    .foregroundStyle(.fontColor)
                 
                 Text("Email")
+                    .customFont(.subheading, fontSize: 21)
+                    .foregroundStyle(.fontColor)
                 
                 HStack {
                     Image(systemName: "envelope")
                     TextField("", text: $userEmail)
                 }
-                .underlineTextField()  
+                .underlineTextField()
+                
                 
                 Text("Password")
+                    .customFont(.subheading, fontSize: 21)
+                    .foregroundStyle(.fontColor)
                 
                 HStack {
                     Image(systemName: "exclamationmark.shield")
@@ -43,9 +52,9 @@ struct LoginView: View {
                 }
                 .underlineTextField()
                 
-               
                 
-             
+                
+                
             }
             Spacer()
         }
@@ -56,37 +65,35 @@ struct LoginView: View {
                 .padding(.vertical, 15)
             
             Text("You can also sign in with these options below")
+                .customFont(.paragraph, fontSize: 19)
+                .foregroundStyle(.fontColor)
         }
-    
+        
         HStack(spacing: 45) {
-            Button(){}label: {
-                Text(" Sign in with AppleID")
-            }
-            .frame(width: 135, height: 50)
-            .background(.black)
+            AppleSignInButtonView()
             
             
-            Button(){}label: {
-                Text("Sign in with Google")
-            }
-            .frame(width: 135, height: 50)
-            .border(.black)
-            .background(.white)
-            .shadow(color: .black, radius: 15)
+            GoogleSignInButtonView()
             
         }
-        .padding(.horizontal, 45)
-        .padding(.vertical, 5)
+        .padding(.horizontal, 10)
         
         HStack(spacing: 105) {
             Text("Forgot Password?")
+                .customFont(.paragraph, fontSize: 21)
+                .foregroundStyle(.fontColor)
             
             Text("Sign Up")
+                .customFont(.paragraph, fontSize: 21)
+                .foregroundStyle(.fontColor)
         }
         .padding(.horizontal, 25)
         .padding(.vertical, 35)
         Spacer()
     }
+        .background(.appBackground)
+    }
+        
 }
 
 #Preview {
