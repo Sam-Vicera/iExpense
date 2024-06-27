@@ -75,3 +75,22 @@ struct GoogleSignInButtonView: View {
         
     }
 }
+
+struct LogoView: View {
+    @State private var isAnimating = false
+       
+       var body: some View {
+           Image("IExpenseLogo")
+               .resizable()
+               .scaledToFit()
+               .frame(width: 150, height: 150)
+               .scaleEffect(isAnimating ? 1.1 : 1.0) // Scale animation
+               .shadow(color: isAnimating ? Color.fontColor : Color.clear, radius: 10)
+               .opacity(isAnimating ? 1.0 : 0.6) // Opacity animation
+               .animation(.easeInOut(duration: 4) .repeatForever(autoreverses: true), value: isAnimating)
+               
+               .onAppear {
+                   self.isAnimating = true
+               }
+       }
+}

@@ -15,9 +15,7 @@ struct LoginView: View {
         VStack{
             
         VStack(alignment: .center, spacing: 2) {
-            Image("IExpenseLogo")
-                .resizable()
-                .frame(width: 150, height: 150)
+            LogoView()
             Text("IExpense")
                 .customFont(.title, fontSize: 28)
                 .foregroundStyle(.fontColor)
@@ -28,8 +26,8 @@ struct LoginView: View {
         HStack {
             
             VStack(alignment: .leading, spacing: 15){
-                Text("Hi there! Nice to see you again")
-                    .customFont(.subheading, fontSize: 22)
+                Text("Hello, sign in below or sign up with us!")
+                    .customFont(.subheading, fontSize: 20)
                     .foregroundStyle(.fontColor)
                 
                 Text("Email")
