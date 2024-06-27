@@ -67,24 +67,13 @@ struct LoginView: View {
         }
         
         HStack(spacing: 45) {
-            Button(){}label: {
-                Text(" Sign in with AppleID")
-            }
-            .frame(width: 135, height: 50)
-            .background(.black)
+            AppleSignInButtonView()
             
             
-            Button(){}label: {
-                Text("Sign in with Google")
-            }
-            .frame(width: 135, height: 50)
-            .border(.black)
-            .background(.white)
-            .shadow(color: .black, radius: 15)
+            GoogleSignInButtonView()
             
         }
-        .padding(.horizontal, 45)
-        .padding(.vertical, 5)
+        .padding(.horizontal, 10)
         
         HStack(spacing: 105) {
             Text("Forgot Password?")
