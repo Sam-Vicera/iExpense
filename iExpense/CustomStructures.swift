@@ -13,15 +13,17 @@ struct CustomButtonView: View {
     @State private var isPressed = false
     
     var body: some View {
-        Text(label)
-            .frame(minWidth: 250)
-            .padding()
-            .foregroundStyle(.white)
-            .background(.uniqueBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 12.5))
-            .shadow(color: .uniqueColor, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 6)
-            .opacity(0.8)
-            
+        Button(){} label: {
+            Text(label)
+                .frame(minWidth: 250)
+                .padding()
+                .foregroundStyle(.white)
+                .background(.uniqueBackground)
+                .clipShape(RoundedRectangle(cornerRadius: 12.5))
+                .shadow(color: .uniqueColor, radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, x: 6)
+                .opacity(0.8)
+        }
+        
     }
 }
 
@@ -45,12 +47,12 @@ struct AppleSignInButtonView: View {
             .background(Color(red: 0/255, green: 0/255, blue: 0/255))
             .cornerRadius(8)
         }
-
+        
     }
 }
 
 struct GoogleSignInButtonView: View {
-//    var action: () -> Void
+    //    var action: () -> Void
     
     var body: some View {
         Button() {} label: {
@@ -64,14 +66,14 @@ struct GoogleSignInButtonView: View {
                     .font(.system(size: 16, weight: .medium, design: .default))
             }
         }
-            .frame(maxWidth: .infinity, minHeight: 44)
-            .padding(.horizontal, 16)
-            .background(Color.white)
-            .cornerRadius(8)
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 1)
-            )
+        .frame(maxWidth: .infinity, minHeight: 44)
+        .padding(.horizontal, 16)
+        .background(Color.white)
+        .cornerRadius(8)
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.gray, lineWidth: 1)
+        )
         
     }
 }
@@ -92,5 +94,70 @@ struct LogoView: View {
                     self.isAnimating = true
                 }
             }
+    }
+}
+
+struct InputFields: View {
+    @Binding var userEmail: String
+    @Binding var userPassword: String
+    
+    @Binding var isSecureField : Bool
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15){
+            Text("Hello, sign in below or sign up with us!")
+                .customFont(.subheading, fontSize: 20)
+                .foregroundStyle(.fontColor)
+            
+            Text("Email")
+                .customFont(.subheading, fontSize: 21)
+                .foregroundStyle(.fontColor)
+            
+            HStack {
+                Image(systemName: "envelope")
+                TextField("", text: $userEmail)
+                    .textInputAutocapitalization(.never)
+            }
+            .underlineTextField()
+            
+            
+            Text("Password")
+                .customFont(.subheading, fontSize: 21)
+                .foregroundStyle(.fontColor)
+            
+            HStack {
+                Image(systemName: "exclamationmark.shield")
+                if isSecureField {
+                    SecureField("", text: $userPassword)
+                } else {
+                    TextField("", text: $userPassword)
+                }
+                
+                Button(){
+                    isSecureField.toggle()
+                }label: {
+                    if isSecureField {
+                        Image(systemName: "eye.slash.fill")
+                    } else {
+                        Image(systemName: "eye")
+                    }
+                }
+            }
+            .underlineTextField()
+            
+        }
+    }
+}
+
+
+struct PressableButtonStyle: ButtonStyle {
+    var pressedColor: Color
+    var normalColor: Color
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundStyle(configuration.isPressed ? pressedColor : normalColor)
+            .fontDesign(.rounded)
+            .animation(.easeInOut(duration: 0.2), value: configuration.isPressed)
     }
 }

@@ -10,6 +10,9 @@ import SwiftUI
 struct LoginView: View {
     @State private var userEmail: String = ""
     @State private var userPassword: String = ""
+    @State private var forgotPassword : Bool = false
+    @State private var signUp : Bool = false
+    @State private var isSecureField: Bool = true
     
     var body: some View {
         
@@ -28,40 +31,11 @@ struct LoginView: View {
             
             HStack {
                 
-                VStack(alignment: .leading, spacing: 15){
-                    Text("Hello, sign in below or sign up with us!")
-                        .customFont(.subheading, fontSize: 20)
-                        .foregroundStyle(.fontColor)
-                    
-                    Text("Email")
-                        .customFont(.subheading, fontSize: 21)
-                        .foregroundStyle(.fontColor)
-                    
-                    HStack {
-                        Image(systemName: "envelope")
-                        TextField("", text: $userEmail)
-                    }
-                    .underlineTextField()
-                    
-                    
-                    Text("Password")
-                        .customFont(.subheading, fontSize: 21)
-                        .foregroundStyle(.fontColor)
-                    
-                    HStack {
-                        Image(systemName: "exclamationmark.shield")
-                        TextField("", text: $userPassword)
-                        Image(systemName: "eye")
-                    }
-                    .underlineTextField()
-                    
-                    
-                    
-                    
-                }
+                InputFields(userEmail: $userEmail, userPassword: $userPassword, isSecureField: $isSecureField)
                 Spacer()
             }
             .padding()
+                
             // navigation link + logic checking combination needed
             VStack(spacing: 10) {
                 CustomButtonView(label: "Sign in")
@@ -82,13 +56,20 @@ struct LoginView: View {
             .padding(.horizontal, 10)
             
             HStack(spacing: 105) {
-                Text("Forgot Password?")
-                    .customFont(.paragraph, fontSize: 21)
-                    .foregroundStyle(.fontColor)
+                NavigationLink(destination: PasswordRetrievalView()) {
+                    
+                    Text("Forgot Password?")
+                        .customFont(.paragraph, fontSize: 21)
+                }
+                .buttonStyle(PressableButtonStyle(pressedColor: .fontColor, normalColor: .blue))
+              
                 
-                Text("Sign Up")
-                    .customFont(.paragraph, fontSize: 21)
-                    .foregroundStyle(.fontColor)
+                NavigationLink(destination: SignUpView()){
+                    Text("Sign Up")
+                        .customFont(.paragraph, fontSize: 21)
+
+                }
+                .buttonStyle(PressableButtonStyle(pressedColor: .fontColor, normalColor: .blue))
             }
             .padding(.horizontal, 25)
             .padding(.vertical, 35)
