@@ -12,86 +12,90 @@ struct LoginView: View {
     @State private var userPassword: String = ""
     
     var body: some View {
-        VStack{
-            
-        VStack(alignment: .center, spacing: 2) {
-            LogoView()
-            Text("IExpense")
-                .customFont(.title, fontSize: 28)
-                .foregroundStyle(.fontColor)
-
-        }
-        .padding(30)
         
-        HStack {
+        NavigationStack {
+            VStack{
+                
+            VStack(alignment: .center, spacing: 2) {
+                LogoView()
+                
+                Text("IExpense")
+                    .customFont(.title, fontSize: 28)
+                    .foregroundStyle(.fontColor)
+
+            }
+            .padding(30)
             
-            VStack(alignment: .leading, spacing: 15){
-                Text("Hello, sign in below or sign up with us!")
-                    .customFont(.subheading, fontSize: 20)
-                    .foregroundStyle(.fontColor)
+            HStack {
                 
-                Text("Email")
-                    .customFont(.subheading, fontSize: 21)
-                    .foregroundStyle(.fontColor)
-                
-                HStack {
-                    Image(systemName: "envelope")
-                    TextField("", text: $userEmail)
+                VStack(alignment: .leading, spacing: 15){
+                    Text("Hello, sign in below or sign up with us!")
+                        .customFont(.subheading, fontSize: 20)
+                        .foregroundStyle(.fontColor)
+                    
+                    Text("Email")
+                        .customFont(.subheading, fontSize: 21)
+                        .foregroundStyle(.fontColor)
+                    
+                    HStack {
+                        Image(systemName: "envelope")
+                        TextField("", text: $userEmail)
+                    }
+                    .underlineTextField()
+                    
+                    
+                    Text("Password")
+                        .customFont(.subheading, fontSize: 21)
+                        .foregroundStyle(.fontColor)
+                    
+                    HStack {
+                        Image(systemName: "exclamationmark.shield")
+                        TextField("", text: $userPassword)
+                        Image(systemName: "eye")
+                    }
+                    .underlineTextField()
+                    
+                    
+                    
+                    
                 }
-                .underlineTextField()
+                Spacer()
+            }
+            .padding()
+            // navigation link + logic checking combination needed
+            VStack(spacing: 10) {
+                CustomButtonView(label: "Sign in")
+                    .padding(.vertical, 15)
                 
-                
-                Text("Password")
-                    .customFont(.subheading, fontSize: 21)
+                Text("You can also sign in with these options below")
+                    .customFont(.paragraph, fontSize: 19)
                     .foregroundStyle(.fontColor)
-                
-                HStack {
-                    Image(systemName: "exclamationmark.shield")
-                    TextField("", text: $userPassword)
-                    Image(systemName: "eye")
-                }
-                .underlineTextField()
+            }
+            
+            HStack(spacing: 45) {
+                AppleSignInButtonView()
                 
                 
-                
+                GoogleSignInButtonView()
                 
             }
+            .padding(.horizontal, 10)
+            
+            HStack(spacing: 105) {
+                Text("Forgot Password?")
+                    .customFont(.paragraph, fontSize: 21)
+                    .foregroundStyle(.fontColor)
+                
+                Text("Sign Up")
+                    .customFont(.paragraph, fontSize: 21)
+                    .foregroundStyle(.fontColor)
+            }
+            .padding(.horizontal, 25)
+            .padding(.vertical, 35)
             Spacer()
         }
-        .padding()
-        // navigation link + logic checking combination needed
-        VStack(spacing: 10) {
-            CustomButtonView(label: "Sign in")
-                .padding(.vertical, 15)
-            
-            Text("You can also sign in with these options below")
-                .customFont(.paragraph, fontSize: 19)
-                .foregroundStyle(.fontColor)
+            .background(.appBackground)
         }
-        
-        HStack(spacing: 45) {
-            AppleSignInButtonView()
-            
-            
-            GoogleSignInButtonView()
-            
-        }
-        .padding(.horizontal, 10)
-        
-        HStack(spacing: 105) {
-            Text("Forgot Password?")
-                .customFont(.paragraph, fontSize: 21)
-                .foregroundStyle(.fontColor)
-            
-            Text("Sign Up")
-                .customFont(.paragraph, fontSize: 21)
-                .foregroundStyle(.fontColor)
-        }
-        .padding(.horizontal, 25)
-        .padding(.vertical, 35)
-        Spacer()
-    }
-        .background(.appBackground)
     }
         
 }
