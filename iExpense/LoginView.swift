@@ -31,7 +31,7 @@ struct LoginView: View {
             
             HStack {
                 
-                InputFields(userEmail: $userEmail, userPassword: $userPassword, isSecureField: $isSecureField)
+                LoginFields(userEmail: $userEmail, userPassword: $userPassword, isSecureField: $isSecureField)
                 Spacer()
             }
             .padding()
