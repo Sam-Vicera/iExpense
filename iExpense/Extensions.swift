@@ -60,23 +60,10 @@ enum FontUsage {
 }
 
 enum SfSymbols: String {
-    case email
-    case password
-    case secureField
-    case nonSecureField
-    
-    var sfSymbol: String {
-        switch self {
-        case .email:
-            return "envelope"
-            
-        case .password:
-            return "exclamationmark.shield"
-            
-        case .secureField:
-            return "eye.slash.fill"
-        case .nonSecureField:
-            return "eye"
-        }
-    }
+    case email = "envelope"
+    case password = "lock"
+    case secureField = "eye.slash"
+    case nonSecureField = "eye"
+    case fullName = "person.crop.square"
+    case confirmPassword = "checkmark.circle"
 }
