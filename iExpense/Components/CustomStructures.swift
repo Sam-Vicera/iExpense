@@ -97,7 +97,7 @@ struct LogoView: View {
     }
 }
 
-struct InputFields: View {
+struct LoginFields: View {
     @Binding var userEmail: String
     @Binding var userPassword: String
     
@@ -114,7 +114,7 @@ struct InputFields: View {
                 .foregroundStyle(.fontColor)
             
             HStack {
-                Image(systemName: "envelope")
+                Image(systemName: SfSymbols.email.rawValue)
                 TextField("", text: $userEmail)
                     .textInputAutocapitalization(.never)
             }
@@ -126,7 +126,7 @@ struct InputFields: View {
                 .foregroundStyle(.fontColor)
             
             HStack {
-                Image(systemName: "exclamationmark.shield")
+                Image(systemName: SfSymbols.password.rawValue)
                 if isSecureField {
                     SecureField("", text: $userPassword)
                 } else {
@@ -137,9 +137,9 @@ struct InputFields: View {
                     isSecureField.toggle()
                 }label: {
                     if isSecureField {
-                        Image(systemName: "eye.slash.fill")
+                        Image(systemName: SfSymbols.secureField.rawValue)
                     } else {
-                        Image(systemName: "eye")
+                        Image(systemName: SfSymbols.nonSecureField.rawValue)
                     }
                 }
             }

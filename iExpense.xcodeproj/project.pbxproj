@@ -24,6 +24,7 @@
 		200B3C452C2DD80000D02D3E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 200B3C3D2C2DD80000D02D3E /* OFL.txt */; };
 		206D09EF2C347115001C6E20 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D09EE2C347114001C6E20 /* SignUpView.swift */; };
 		206D09F32C347374001C6E20 /* PasswordRetrievalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206D09F22C347374001C6E20 /* PasswordRetrievalView.swift */; };
+		20F6C3072C34B6680099A27B /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F6C3062C34B6680099A27B /* InputFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,7 @@
 		2009A18C2BB1D50A00933D6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2009A18F2BB1D50A00933D6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2009A1962BB1E79900933D6D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
-		200B3C312C2C841400D02D3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		200B3C312C2C841400D02D3E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = ../LoginView.swift; sourceTree = "<group>"; };
 		200B3C332C2C8C3A00D02D3E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		200B3C352C2DCF8100D02D3E /* CustomStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStructures.swift; sourceTree = "<group>"; };
 		200B3C372C2DD80000D02D3E /* ComicNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Bold.ttf"; sourceTree = "<group>"; };
@@ -44,8 +45,9 @@
 		200B3C3C2C2DD80000D02D3E /* ComicNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ComicNeue-Regular.ttf"; sourceTree = "<group>"; };
 		200B3C3D2C2DD80000D02D3E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		200B3C462C2DDA0400D02D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		206D09EE2C347114001C6E20 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		206D09F22C347374001C6E20 /* PasswordRetrievalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRetrievalView.swift; sourceTree = "<group>"; };
+		206D09EE2C347114001C6E20 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpView.swift; path = ../SignUpView.swift; sourceTree = "<group>"; };
+		206D09F22C347374001C6E20 /* PasswordRetrievalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PasswordRetrievalView.swift; path = ../PasswordRetrievalView.swift; sourceTree = "<group>"; };
+		20F6C3062C34B6680099A27B /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,18 +80,16 @@
 		2009A1872BB1D50600933D6D /* iExpense */ = {
 			isa = PBXGroup;
 			children = (
+				20F6C3052C34B53D0099A27B /* Components */,
+				20F6C3042C34B3510099A27B /* Authentication */,
 				200B3C462C2DDA0400D02D3E /* Info.plist */,
 				200B3C3E2C2DD80000D02D3E /* Comic_Neue */,
 				2009A1882BB1D50600933D6D /* iExpenseApp.swift */,
-				2009A18A2BB1D50600933D6D /* ContentView.swift */,
 				2009A1962BB1E79900933D6D /* AddView.swift */,
+				2009A18A2BB1D50600933D6D /* ContentView.swift */,
 				2009A18C2BB1D50A00933D6D /* Assets.xcassets */,
 				2009A18E2BB1D50A00933D6D /* Preview Content */,
-				200B3C312C2C841400D02D3E /* LoginView.swift */,
 				200B3C332C2C8C3A00D02D3E /* Extensions.swift */,
-				200B3C352C2DCF8100D02D3E /* CustomStructures.swift */,
-				206D09EE2C347114001C6E20 /* SignUpView.swift */,
-				206D09F22C347374001C6E20 /* PasswordRetrievalView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -114,6 +114,26 @@
 				200B3C3D2C2DD80000D02D3E /* OFL.txt */,
 			);
 			path = Comic_Neue;
+			sourceTree = "<group>";
+		};
+		20F6C3042C34B3510099A27B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				200B3C312C2C841400D02D3E /* LoginView.swift */,
+				206D09EE2C347114001C6E20 /* SignUpView.swift */,
+				206D09F22C347374001C6E20 /* PasswordRetrievalView.swift */,
+			);
+			name = Authentication;
+			path = /Users/sam_h_vicera/Desktop/iExpense/iExpense/Authentication;
+			sourceTree = "<absolute>";
+		};
+		20F6C3052C34B53D0099A27B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				200B3C352C2DCF8100D02D3E /* CustomStructures.swift */,
+				20F6C3062C34B6680099A27B /* InputFieldView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +221,7 @@
 				2009A1892BB1D50600933D6D /* iExpenseApp.swift in Sources */,
 				200B3C322C2C841400D02D3E /* LoginView.swift in Sources */,
 				2009A1972BB1E79900933D6D /* AddView.swift in Sources */,
+				20F6C3072C34B6680099A27B /* InputFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

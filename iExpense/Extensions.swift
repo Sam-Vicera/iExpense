@@ -58,3 +58,12 @@ enum FontUsage {
            }
        }
 }
+
+enum SfSymbols: String {
+    case email = "envelope"
+    case password = "lock"
+    case secureField = "eye.slash"
+    case nonSecureField = "eye"
+    case fullName = "person.crop.square"
+    case confirmPassword = "checkmark.circle"
+}
