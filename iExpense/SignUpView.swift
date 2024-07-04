@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State private var userEmail: String = ""
     @State private var userFullName: String = ""
     @State private var userPassword: String = ""
@@ -64,9 +66,16 @@ struct SignUpView: View {
         }
         .padding(.horizontal, 25)
             
-       Text("Have an Account? Sign In")
-                .foregroundStyle(.fontColor)
-    }
+            HStack{
+                Text("Have an Account?")
+                    .foregroundStyle(.fontColor)
+                Button(){ dismiss() }label: {
+                    Text("Sign In")
+                }
+                
+            }
+        }
+        .toolbar(.hidden, for: .automatic)
         .padding()
         .background(.appBackground)
 }
