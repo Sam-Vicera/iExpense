@@ -53,7 +53,7 @@ struct InputFieldView: View {
                     Image(systemName: symbol.rawValue)
                             }
                 
-                if isSecureFieldActive {
+                if passwordField && isSecureFieldActive {
                     SecureField("", text: $text)
                 } else {
                     TextField("", text: $text)

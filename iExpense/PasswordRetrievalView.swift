@@ -32,6 +32,8 @@ struct PasswordRetrievalView: View {
                         Image(systemName: SfSymbols.email.rawValue)
                         TextField("", text: $userInput)
                     }
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
                     .underlineTextField()
                     
                 }
