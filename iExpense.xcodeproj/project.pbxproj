@@ -29,6 +29,8 @@
 		20F6C30E2C377DF60099A27B /* LoginView2.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F6C30D2C377DF50099A27B /* LoginView2.png */; };
 		20F6C3102C377DF90099A27B /* SignUpView.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F6C30F2C377DF90099A27B /* SignUpView.png */; };
 		20F6C3122C377DFD0099A27B /* PasswordRetrievalView.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F6C3112C377DFD0099A27B /* PasswordRetrievalView.png */; };
+		20F6C3142C3781040099A27B /* OriginalAppDesign.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F6C3132C3781040099A27B /* OriginalAppDesign.png */; };
+		20F6C3162C37811F0099A27B /* AddExpensesView.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F6C3152C37811F0099A27B /* AddExpensesView.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		20F6C30D2C377DF50099A27B /* LoginView2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginView2.png; sourceTree = "<group>"; };
 		20F6C30F2C377DF90099A27B /* SignUpView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignUpView.png; sourceTree = "<group>"; };
 		20F6C3112C377DFD0099A27B /* PasswordRetrievalView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PasswordRetrievalView.png; sourceTree = "<group>"; };
+		20F6C3132C3781040099A27B /* OriginalAppDesign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OriginalAppDesign.png; sourceTree = "<group>"; };
+		20F6C3152C37811F0099A27B /* AddExpensesView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddExpensesView.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		20F6C30A2C377BF30099A27B /* ReadMe */ = {
 			isa = PBXGroup;
 			children = (
+				20F6C3152C37811F0099A27B /* AddExpensesView.png */,
+				20F6C3132C3781040099A27B /* OriginalAppDesign.png */,
 				20F6C30B2C377DF00099A27B /* LoginView.png */,
 				20F6C30D2C377DF50099A27B /* LoginView2.png */,
 				20F6C30F2C377DF90099A27B /* SignUpView.png */,
@@ -214,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F6C3142C3781040099A27B /* OriginalAppDesign.png in Resources */,
 				20F6C30E2C377DF60099A27B /* LoginView2.png in Resources */,
 				200B3C442C2DD80000D02D3E /* ComicNeue-Regular.ttf in Resources */,
 				20F6C3102C377DF90099A27B /* SignUpView.png in Resources */,
@@ -225,6 +232,7 @@
 				20F6C3122C377DFD0099A27B /* PasswordRetrievalView.png in Resources */,
 				200B3C412C2DD80000D02D3E /* ComicNeue-Italic.ttf in Resources */,
 				200B3C432C2DD80000D02D3E /* ComicNeue-LightItalic.ttf in Resources */,
+				20F6C3162C37811F0099A27B /* AddExpensesView.png in Resources */,
 				200B3C422C2DD80000D02D3E /* ComicNeue-Light.ttf in Resources */,
 				2009A18D2BB1D50A00933D6D /* Assets.xcassets in Resources */,
 			);
