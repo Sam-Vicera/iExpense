@@ -55,7 +55,6 @@ struct SignUpView: View {
                 text: $confirmationPassword,
                 title: "Confirm Password",
                 placeholder: "String" ,
-            
                 passwordField: true)
             Spacer()
             

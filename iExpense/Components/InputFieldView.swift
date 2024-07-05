@@ -55,8 +55,10 @@ struct InputFieldView: View {
                 
                 if passwordField && isSecureFieldActive {
                     SecureField("", text: $text)
+                        .ignoresSafeArea(.keyboard)
                 } else {
                     TextField("", text: $text)
+                        .ignoresSafeArea(.keyboard)
                 }
                 
                 Button(){
